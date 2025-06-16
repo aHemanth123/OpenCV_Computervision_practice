@@ -31,6 +31,9 @@ circle =  cv.circle (blank, (img.shape[1]//2 ,img.shape[0] //2 ),100,255,-1)
 
 
 # gray scale  histogram 
+
+# To limit histogram computation to the masked region
+
 # gray_hist = cv.calcHist([gray], [0] , None , [256] ,[0 ,256])
 # gray_hist = cv.calcHist([gray], [0] ,  mask  , [256] ,[0 ,256])
 
