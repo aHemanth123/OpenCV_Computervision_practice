@@ -47,14 +47,21 @@ cv.waitKey(0)
 | BGR → HSV       | `cv.COLOR_BGR2HSV`   |
 | BGR → LAB       | `cv.COLOR_BGR2LAB`   |
 | BGR → YCrCb     | `cv.COLOR_BGR2YCrCb` |
+  
 | RGB → BGR       | `cv.COLOR_RGB2BGR`   |
 | RGB → Grayscale | `cv.COLOR_RGB2GRAY`  |
 | RGB → HSV       | `cv.COLOR_RGB2HSV`   |
-| HSV → BGR       | `cv.COLOR_HSV2BGR`   |
-| LAB → BGR       | `cv.COLOR_LAB2BGR`   |
-| YCrCb → BGR     | `cv.COLOR_YCrCb2BGR` |
+
+ 
 | Grayscale → BGR | `cv.COLOR_GRAY2BGR`  |
 | Grayscale → RGB | `cv.COLOR_GRAY2RGB`  |
+  
+| HSV → BGR       | `cv.COLOR_HSV2BGR`   |
+  
+| LAB → BGR       | `cv.COLOR_LAB2BGR`   |
+  
+| YCrCb → BGR     | `cv.COLOR_YCrCb2BGR` |
+   
 
 
 
@@ -63,7 +70,9 @@ cv.waitKey(0)
 | ------------------ | --------------------------------- | ------------------ |
 | Grayscale → HSV    | Missing hue/saturation info       | `GRAY → BGR → HSV` |
 | Grayscale → LAB    | Missing color info                | `GRAY → BGR → LAB` |
+  
 | HSV → Grayscale    | Hue/saturation can’t be collapsed | `HSV → BGR → GRAY` |
-| LAB → Grayscale    | Same reason                       | `LAB → BGR → GRAY` |
 | HSV → LAB          | Not directly convertible          | `HSV → BGR → LAB`  |
+  
+| LAB → Grayscale    | Same reason                       | `LAB → BGR → GRAY` | 
 | LAB → HSV          | Not directly convertible          | `LAB → BGR → HSV`  |
