@@ -7,8 +7,10 @@ cv.imshow('ELEphant',img)
 # transformation
 def translate(img, x, y) :   # x ,y-> how much shift along axis 
 
-    transMat =np.float32([[1,0,x],[0,1,y]])   # translation Matrix 
+    transMat =np.float32([[1,0,x],[0,1,y]])   # translation Matrix   2×3 affine transformation matrix , 
+    # np.float32(...): Converts the matrix to 32-bit floating point, which is required by cv.warpAffine.
     dimensions = (img.shape[1],img.shape[0])  # width , height 
+    
     return cv.warpAffine(img, transMat, dimensions)
 
 
@@ -20,14 +22,17 @@ def translate(img, x, y) :   # x ,y-> how much shift along axis
 translated =translate(img, 50, 50)  # right x ,down y
 # cv.imshow('TRANSLATED',  translated)
 
+
 # rotation
 def rotate(img ,angle ,  rotPoint = None):
-    (height,width) = img.shape[:2]
+    
+     height = img.shape[0]
+     width = img.shape[1]
 
     if rotPoint  is None:
         rotPoint = (width//2, height//2)   # rotate around center 
 
-    rotMat = cv.getRotationMatrix2D(rotPoint,angle , 1.0)
+    rotMat = cv.getRotationMatrix2D(rotPoint,angle , 1.0)  # 2×3 affine rotation matrix using OpenCV’s getRotationMatrix2D. 1 for no scaling
     dimensions = (width , height)
 
     return cv.warpAffine(img, rotMat,dimensions)
