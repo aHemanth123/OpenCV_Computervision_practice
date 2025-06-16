@@ -3,6 +3,8 @@ import cv2 as cv
 import matplotlib.pyplot as plt 
 import numpy as np 
 
+# Masking in OpenCV is the process of isolating or highlighting specific parts of an image by using a mask—a black-and-white image 
+
  
 img =  cv.imread('Images/elephant.jpg')
 cv.imshow('Img',img)  
