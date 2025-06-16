@@ -14,7 +14,7 @@ def  rescaleFrame(frame , scale = 0.75 ):
     dimensions = (width, height)
 
     # float --> int
-    return cv.resize(frame,dimensions , interpolation=cv.INTER_AREA)
+    return cv.resize(frame,dimensions , interpolation=cv.INTER_AREA)  # interpolation=cv.INTER_AREA is an algorithm optimized for shrinking images
 
 
 
