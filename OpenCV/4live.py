@@ -30,6 +30,47 @@ def changeRes(capture_obj, width, height):
 # 14	cv.CAP_PROP_GAIN	Gain (camera-specific setting).
 # 15	cv.CAP_PROP_EXPOSURE	Exposure (camera-specific setting).
 
+# Set property 0: Position in milliseconds (for videos)
+# capture_obj.set(0, 5000)  # Jump to 5000 ms (5 seconds) in the video
+
+# Set property 1: Position in frames (for videos)
+# capture_obj.set(1, 100)   # Jump to the 100th frame
+
+# Set property 2: Relative position (0.0 = start, 1.0 = end)
+# capture_obj.set(2, 0.5)   # Jump to the middle of the video
+
+# Set property 3: Frame width (for camera)
+# capture_obj.set(3, 640)   # Set width to 640 pixels
+
+# Set property 4: Frame height (for camera)
+# capture_obj.set(4, 480)   # Set height to 480 pixels
+
+# Set property 5: Frames per second (some cameras may ignore this)
+# capture_obj.set(5, 30)    # Attempt to set FPS to 30
+
+# Set property 6: FOURCC codec (used only when writing video)
+# Must be set using cv.VideoWriter, not usually useful here
+
+# Set property 7: Total number of frames – cannot be set (read-only)
+
+# Set property 10: Brightness (0–255 range, varies by camera)
+# capture_obj.set(10, 150)  # Increase brightness
+
+# Set property 11: Contrast (range varies)
+# capture_obj.set(11, 50)   # Set contrast
+
+# Set property 12: Saturation
+# capture_obj.set(12, 100)  # Adjust saturation
+
+# Set property 13: Hue
+# capture_obj.set(13, 50)   # Adjust hue
+
+# Set property 14: Gain
+# capture_obj.set(14, 30)   # Set gain
+
+# Set property 15: Exposure
+# capture_obj.set(15, -5)   # Lower value = longer exposure (may require auto exposure off)
+
 # ---------------------------------------------------------
 
 
