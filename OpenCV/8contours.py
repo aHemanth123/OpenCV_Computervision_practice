@@ -20,15 +20,24 @@ cv.imshow('Grey',gray)
 # cv.imshow('Canny Edges' ,canny )
 
 #2 method  -----
-ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY) # threshold values 
+ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY) # threshold values  If pixel value > 125 → set to 255 (white) # Else → set to 0 (black)
 cv.imshow('THRESH',thresh)
 
 #----------- CONTOURS 
 
-#contours 
+#contours  <-- thresh is binary output
+
+# cv.RETR_EXTERNAL	 - Only outer contours
+# cv.RETR_LIST	 - All contours, no hierarchy
+
+# (thresh, countour revival mode, contour approximation)
+
 contours, hierarchies =  cv.findContours( thresh ,cv.RETR_LIST,cv.CHAIN_APPROX_SIMPLE)  #  RETR_list ,RETR_tree ,external -> Explore  
+
 # cv.CHAIN_APPROX_NONE ---> contours approximation  ,  cv.CHAIN_APPROX_SIMPLE  --> compressed approximation
+
 print(f'{len(contours)} contours  found !')
+
 
 
 # 
