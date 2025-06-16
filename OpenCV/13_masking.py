@@ -28,7 +28,7 @@ weird   = cv.bitwise_and(circ,rect)
 
 
 # #masked            --img = mask ---
-# masked = cv.bitwise_and(img, img, mask = mask)
+# masked = cv.bitwise_and(img, img, mask = mask) #     with rectangle  -- 2
 # cv.imshow('Masked image ',masked)
 
 #masking weird         shape  = wierd   -----
