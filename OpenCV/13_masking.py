@@ -10,6 +10,8 @@ img =  cv.imread('Images/roadway.jpg')
 cv.imshow('Img',img)  
 
 
+# Masking in OpenCV is the process of isolating or highlighting specific parts of an image by using a mask—a black-and-white image 
+
 blank = np.zeros(img.shape[:2],dtype= 'uint8')   
 # cv.imshow('blank img',blank)
 
