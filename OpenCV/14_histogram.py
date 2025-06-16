@@ -2,7 +2,18 @@ import cv2 as cv
 
 import matplotlib.pyplot as plt 
 import numpy as np 
- 
+# An image histogram is a graphical representation of the distribution of pixel intensities (brightness values) in an image.
+
+# Grayscale Histogram: Shows how many pixels have each intensity (0–255).
+# Color Histogram: Shows the same for blue, green, and red channel
+
+
+# Why Use Histograms?
+# ✅ To analyze brightness and contrast.
+# ✅ For image segmentation and thresholding.
+# ✅ To equalize image contrast using histogram equalization.
+# ✅ For feature extraction in image processing and computer vision.
+
 img =  cv.imread('Images/elephant.jpg')
 cv.imshow('Img',img)  
 
