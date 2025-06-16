@@ -11,16 +11,16 @@ blur = cv.GaussianBlur(img, (3,3),cv.BORDER_DEFAULT) # odd no 3,3  -> 7,7  incre
 cv.imshow('BLur',blur)
 
 # Edge cascade 
-canny = cv.Canny(img, 125,175)
+canny = cv.Canny(img, 125,175)  # -> threshold 125,175
 cv.imshow("Canny Edges ",canny )
 # if there are so many edges  then pass blur image 
 
 
-# dilating  the image  using structure img <- canny 
+# dilating  the image  using structure img <- canny  <- (Thickening Edges)
 dilated = cv.dilate(canny , (3,3), iterations= 1)
 cv.imshow('Dilated',dilated)
 
-#Eroding
+#Eroding   <-- (Thinning Edges)
 eroded = cv.erode(dilated, (3,3) ,iterations = 1)
 cv.imshow("Eroded",eroded)
 
